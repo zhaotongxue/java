@@ -1,0 +1,96 @@
+package com.zhao.operatexml;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import android.app.Activity;
+import android.content.ClipData.Item;
+import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
+import android.support.v7.internal.widget.AdapterViewCompat.OnItemClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity  implements OnItemClickListener{
+@Override
+	public void onItemClick(AdapterViewCompat<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+private ListView lv;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		lv=(ListView) findViewById(R.id.list);
+		DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();
+		DocumentBuilder db;
+		try {
+			db = dbf.newDocumentBuilder();
+			Document d=db.parse(getAssets().open("contact.xml"));
+			Element e=d.getDocumentElement();
+			//NodeList n=e.getElementsByTagName("Name");
+			NodeList n=e.getChildNodes();
+			ArrayList<String> al=new ArrayList<String>();
+			for(int i=0;i<n.getLength();i++){
+				if(n.item(i).getParentNode().getNodeName()=="Contact"){
+					al.add(n.item(i).getTextContent());
+					int num=1;
+					while(n.item(num).getNodeName()!="PhoneList"){
+						num++;
+					}
+					NodeList phoneNL=n.item(num).getChildNodes();
+					for(int j=1;j<phoneNL.getLength();j++){
+						al.add(phoneNL.item(j).getTextContent());
+					}
+				}
+			}
+			ArrayAdapter< String> aa=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,al);
+			lv.setAdapter(aa);
+//			lv.setOnClickListener(new OnClickListener() {
+//				@Override
+//				public void onClick(View v) {
+//					// TODO Auto-generated method stub
+//					//Toast.makeText(this,v.toString(),Toast.LENGTH_LONG).show();
+//					ToastShow(lv,v);
+//				}
+//			});
+			
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void  ToastShow(ListView lv,View v){
+					Toast.makeText(v.getContext(),lv.indexOfChild(v), Toast.LENGTH_LONG).show();
+	}
+}
+/*
+ * !!!!!!
+class showToast{
+	
+	public showToast(View v) {
+		// TODO Auto-generated constructor stub
+		Toast.makeText(this, v.getC, duration)
+	}
+}
+ */

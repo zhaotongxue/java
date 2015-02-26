@@ -1,0 +1,129 @@
+package com.zhao.operatexml;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
+import android.support.v7.internal.widget.AdapterViewCompat.OnItemClickListener; import android.view.View; import android.widget.ArrayAdapter; import android.widget.ListView; 
+public class MainActivity extends Activity  implements OnItemClickListener{ @Override
+	public void onItemClick(AdapterViewCompat<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+
+	}
+	private ListView lv;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		lv=(ListView) findViewById(R.id.list);
+		DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();
+		DocumentBuilder db;
+		try {
+			db=dbf.newDocumentBuilder();
+			Document d=db.parse("data/contact.xml");
+			NodeList contactNodeLists=d.getElementsByTagName("Name");
+			
+			ArrayList<String> al=new ArrayList<String>();
+			for(int i=0;i<contactNodeLists.getLength();i++){
+				al.add(contactNodeLists.item(i).getTextContent());
+			}
+			al.add("nihaollllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll");
+			/*
+			for(int i=0;i<contactNodeLists.getLength();i++){
+				NodeList contactNodeList=contactNodeLists.item(i).getChildNodes();
+				al.add(contactNodeList.item(1).getTextContent());
+				int num=1;
+				while(contactNodeList.item(num).getNodeName()!="PhoneList"){
+					++num;
+				}
+				NodeList phones=contactNodeList.item(num).getChildNodes();
+				for(int phonesNum=1;phonesNum<phones.getLength();phonesNum++){
+					al.add(phones.item(phonesNum).getTextContent());
+				}
+			}
+//			File f=new File("assets/abc.xml");
+//			//OutputStream os=new FileOutputStream(f);
+//			OutputStreamWriter osw=new OutputStreamWriter(new FileOutputStream(f));
+//			osw.write(al.iterator().toString());
+//			osw.close();
+//			System.out.println(al.iterator().toString());
+ **/
+			ArrayAdapter<String> aa=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, al);
+			lv.setAdapter(aa);
+//			for(String s:al){
+//				System.out.println(s);
+//			}
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+//		try {
+//			db = dbf.newDocumentBuilder();
+//			Document d=db.parse(getAssets().open("contact.xml"));
+//			Element e=(Element) d.getElementsByTagName("Contact");
+//			Element names;
+//			//NodeList n=e.getElementsByTagName("Name");
+//			NodeList n=e.getChildNodes();
+//			ArrayList<String> al=new ArrayList<String>();
+//			//遍历所有Contact
+//			for(int i=1;i<n.getLength();i++){
+//				//获得每个Contact下的Name
+//				NodeList nameList=e.getElementsByTagName("Name");
+//				//如果Name读父节点是Contact，就添加
+//				for(int j=0;j<nameList.getLength();j++){
+//					if(nameList.item(j).getParentNode().getNodeName()=="Contact"){
+//						al.add(nameList.item(j).getTextContent());
+//					}
+//				}
+//				
+////				if(n.item(i).getParentNode().getNodeName()=="Contact"){
+////					al.add(n.item(i).getTextContent());
+////					}
+//					int num=1;
+//					while(n.item(num).getNodeName()!="PhoneList"){
+//						num++;
+//					}
+//					NodeList phoneNL=n.item(num).getChildNodes();
+//					for(int j=1;j<phoneNL.getLength();j++){
+//						al.add(phoneNL.item(j).getTextContent());
+//					}
+//				}
+//				ArrayAdapter< String> aa=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,al);
+//				Toast.makeText(this, "好了 ", Toast.LENGTH_LONG).show();
+//				lv.setAdapter(aa);
+//		}catch (ParserConfigurationException e1) {
+//			
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (SAXException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+//
+//		}
+//	}

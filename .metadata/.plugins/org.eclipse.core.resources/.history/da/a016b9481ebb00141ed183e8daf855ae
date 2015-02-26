@@ -1,0 +1,23 @@
+package files;
+
+import java.io.IOException;
+
+import javax.swing.text.Document;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
+public class Xml {
+
+	public static void main(String[] args) throws ParserConfigurationException, Exception, IOException {
+		// TODO Auto-generated method stub
+		DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();
+		DocumentBuilder db=dbf.newDocumentBuilder();
+		Document d=(Document) db.parse("re'/contact.xml");
+		//Element e=d.get
+		
+	}
+
+}

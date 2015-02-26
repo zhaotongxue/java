@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ha</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="showText">显示文本</string>
+    <string name="addText">添加文本</string>
+    <string name="hint">this.hint ,yes you saw it</string>
+</resources>

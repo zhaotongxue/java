@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Remove Container" description="Remove Container" file="/TODO/res/layout/main_todo_layout.xml" flags="6" id="com.android.ide.eclipse.adt.refactoring.unwrap" proj="/TODO" sel-end="764" sel-start="229" stamp="1424405239088"/>
+</session>

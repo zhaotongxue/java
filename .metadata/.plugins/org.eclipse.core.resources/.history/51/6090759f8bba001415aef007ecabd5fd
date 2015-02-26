@@ -1,0 +1,17 @@
+package files;
+import java.io.*;
+public class CreatAndDeleleAndRename {
+public static  void main(String[] args) throws IOException	{
+//	File folder=new File("path");
+//	folder.mkdir();
+//	folder=new File("path/1/2");
+//	System.out.println(folder.mkdir());
+//	folder.mkdirs();
+	File folder=new File("soga/1");
+	//folder.renameTo(new File("soga"));
+	File d=new File("abc");
+	d.createNewFile();
+	folder.renameTo(new File("abc"));
+}
+
+}

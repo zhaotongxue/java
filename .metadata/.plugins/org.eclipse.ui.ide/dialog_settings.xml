@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="644" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="403" key="DIALOG_HEIGHT"/>
+		<item value="361" key="DIALOG_X_ORIGIN"/>
+		<item value="138" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/media/doc/Source/View/Android 4/9781118102275 PA4AD/Full Worked Sample Projects/Chapter_4_To-do_List_Part_2"/>
+			<item value="/media/doc/Source/View/Android 4/9781118102275 PA4AD/Full Worked Sample Projects/Chapter_4_Compass"/>
+			<item value="/media/doc/Source/Java_Linux/appcompat_v7"/>
+			<item value="/media/doc/Source/Java_Linux/Ha"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

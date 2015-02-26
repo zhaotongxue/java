@@ -1,0 +1,31 @@
+package datagram_test;
+
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketAddress;
+import java.net.SocketException;
+import java.util.Arrays;
+
+public class DatagramSocketServer {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		DatagramSocket ds=new DatagramSocket(5000);
+		//接收信息 
+		byte[] buf=new byte[30];
+		DatagramPacket dp=new DatagramPacket(buf, buf.length);
+		ds.receive(dp);
+		System.out.println("buf是"+Arrays.toString(buf));
+		byte[] bData=dp.getData();
+		System.out.println("getData:"+Arrays.toString(bData));
+		//响应数据
+		DatagramPacket responseDP=new DatagramPacket("你好世界".getBytes(),"你好世界".getBytes().length,ds.getInetAddress(),5000);
+		ds.send(responseDP);
+		ds.close();
+		
+		
+	}
+
+}
