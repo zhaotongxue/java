@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;Basic/src/web_develop&apos;&#x0A;- Original project: &apos;SocketTest&apos;&#x0A;- Destination element: &apos;Basic/src/web_develop&apos;&#x0A;- Original elements:&#x0A;     datagram_test.DatagramSocketClient.java&#x0A;     datagram_test.DatagramSocketServer.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="=Basic/src&lt;web_develop" element1="/src&lt;datagram_test{DatagramSocketClient.java" element2="/src&lt;datagram_test{DatagramSocketServer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1428101441577" units="2" version="1.0"/>
+</session>

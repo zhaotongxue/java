@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/media/doc/Source/Java_Linux/ChatRoomSocket"/>
 			<item value="/media/doc/Source/View/Android 4/9781118102275 PA4AD/Full Worked Sample Projects/Chapter_4_To-do_List_Part_2"/>
 			<item value="/media/doc/Source/View/Android 4/9781118102275 PA4AD/Full Worked Sample Projects/Chapter_4_Compass"/>
 			<item value="/media/doc/Source/Java_Linux/appcompat_v7"/>

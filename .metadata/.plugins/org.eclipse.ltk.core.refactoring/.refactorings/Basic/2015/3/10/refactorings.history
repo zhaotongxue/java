@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;NoClassCompile.java&apos; to &apos;iso.txt&apos;&#x0A;- Original project: &apos;Basic&apos;&#x0A;- Destination element: &apos;iso.txt&apos;&#x0A;- Original element: &apos;reflect.NoClassCompile.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" element1="/src&lt;reflect{NoClassCompile.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1425564050213" target="iso.txt" units="1" version="1.0"/>
+</session>

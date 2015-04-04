@@ -1,0 +1,42 @@
+package toKnow;
+
+public class ContinueBreakReturn {
+public static void main(String[] args) {
+	ContinueClass cc=new ContinueClass();
+	BreakClass bc=new BreakClass();
+	ReturnClass rc=new ReturnClass();
+}
+}
+class ContinueClass{
+	public ContinueClass() {
+		// TODO Auto-generated constructor stub
+		for(int i=0;i<5;i++){
+			if(i==2){
+				continue;
+				}
+			System.out.println("continue:"+i);
+		}
+	}
+}
+class BreakClass{
+	public BreakClass() {
+		// TODO Auto-generated constructor stub
+		for(int i=0;i<5;i++){
+			if(i==2){
+				break;
+				}
+			System.out.println("break:"+i);
+		}
+	}
+}
+class ReturnClass{
+	public ReturnClass() {
+		// TODO Auto-generated constructor stub
+		for(int i=0;i<5;i++){
+			if(i==2){
+				continue;
+				}
+			System.out.println("break:"+i);
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;network&apos; to &apos;ChatRoomSocket&apos;&#x0A;- Original project: &apos;ChatRoomSocket&apos;&#x0A;- Destination element: &apos;ChatRoomSocket&apos;&#x0A;- Original element: &apos;ChatRoomSocket/src/network&apos;&#x0A;- Update references to refactored element" description="Move package" element1="/src&lt;network" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1428101215323" target="/Basic/ChatRoomSocket" version="1.0"/>
+</session>
