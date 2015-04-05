@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<lint>
-    <issue id="MissingTranslation">
-        <ignore path="res/values/strings.xml" />
-    </issue>
-    <issue id="NewApi">
-        <ignore path="src/com/zhao/soga/DrawClass.java" />
-    </issue>
-</lint>
