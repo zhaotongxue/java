@@ -4,7 +4,7 @@ import general.P;
 
 public class ContinueBreakReturn {
 public static void main(String[] args) {
-	//P.p("你好");
+	P.p("你好");
 	ContinueClass cc=new ContinueClass();
 	BreakClass bc=new BreakClass();
 	ReturnClass rc=new ReturnClass();
